@@ -1,0 +1,61 @@
+baseURL = 'https://r7n.dev/'
+languageCode = 'en-us'
+title = 'r7n.dev'
+theme = 'archie'
+copyright = "© r7n.dev"
+# Code Highlight
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+#enableGitInfo = true
+#
+#
+[params]
+	mode="auto"
+	useCDN=false
+	subtitle = "My name is Ken Robertson, and these are my random thoughts and ramblings as a technologist and machinist."
+	twitter_cards = true
+  cystomcss = ["css/custom.css"]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 1
+
+[[menu.main]]
+identifier = "about"
+name = "about"
+url = "/about/"
+weight = 10
+
+[[menu.main]]
+identifier = "search"
+name = "search"
+url = "/search/"
+weight = 11
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/krobertson"
+
+[[params.social]]
+name = "Instagram"
+icon = "instagram"
+url = "https://twitter.com/robertsoncustomcreations/"
+
+[[params.social]]
+name = "fluxworkholding"
+icon = "external-link"
+url = "https://fluxworkholding.com"
+
+[[params.social]]
+name = "mail"
+icon = "mail"
+url = "mailto:me@r7n.dev"
+
+[outputs]
+  home = ["HTML", "JSON"]
+  page = ["HTML"]
