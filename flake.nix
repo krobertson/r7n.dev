@@ -4,27 +4,19 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      flake-utils,
-    }:
-    flake-utils.lib.eachDefaultSystem (
-      system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in
-      {
-        formatter = pkgs.nixfmt-tree;
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-            # Explicitly list pkg-config so that mkShell will arrange
-            # for the PKG_CONFIG_PATH to find the .pc files.
-            pkg-config
-            hugo
-          ];
-        };
-      }
-    );
+  outputs = { nixpkgs, flake-utils, ... }:
+  flake-utils.lib.eachDefaultSystem(
+    system:
+    let
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      devShells.default = pkgs.mkShell {
+        packages = [ pkgs.hugo pkgs.zsh ];
+        shellHook = ''
+          ${pkgs.hugo}/bin/hugo server
+          exec zsh
+        '';
+      };
+    }
+  );
 }
