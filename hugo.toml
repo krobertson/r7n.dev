@@ -2,7 +2,7 @@ baseURL = 'https://r7n.dev/'
 languageCode = 'en-us'
 title = 'r7n.dev'
 theme = 'archie'
-copyright = "© r7n.dev"
+copyright = "© Ken Robertson"
 # Code Highlight
 pygmentsstyle = "monokai"
 pygmentscodefences = true
@@ -16,13 +16,23 @@ pygmentscodefencesguesssyntax = true
 	useCDN=false
 	subtitle = "My name is Ken Robertson, and these are my random thoughts and ramblings as a technologist and machinist."
 	twitter_cards = true
-  cystomcss = ["css/custom.css"]
+  customcss = ["css/custom.css"]
 
 [markup]
   [markup.tableOfContents]
     endLevel = 4
     ordered = false
     startLevel = 1
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.renderHooks.image]
+        useEmbedded = 'auto'
+
+[[menu.main]]
+name = "archive"
+url = "/posts/"
+weight = 8
 
 [[menu.main]]
 identifier = "about"
