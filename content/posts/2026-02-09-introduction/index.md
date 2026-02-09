@@ -1,7 +1,6 @@
 ---
 title: Introduction
-date: '2026-02-07T22:26:58-08:00'
-draft: true
+date: '2026-02-09T13:58:58-08:00'
 tags: ['personal']
 ---
 
@@ -16,7 +15,7 @@ been working with VMware' CloudFoundry before joing Apcera and working on their
 platform and container technology just as Docker was starting to emerge, and later
 Kubernetes taking over.
 
-![Coinbase logo](coinbase.png?border=0)
+![Coinbase logo](coinbase.png)
 
 Most notably, I joined the team at Coinbase in early 2017 and stayed through
 late-2021, after their IPO. Coinbase was an amazing experience. When I started,
@@ -38,7 +37,7 @@ So I left tech completely and after some exploring, ended up picking up CNC
 machining. It wasn't completely out of the blue. My dad is a third generation
 machinist, which would technically make me a fourth generation machinist now.
 
-!image
+![Shop picture](shop.jpg)
 
 Machining isn't all that different. You produce Gcode, using a post processor
 that is written in JavaScript. The post helps the CAD/CAM program produce Gcode
