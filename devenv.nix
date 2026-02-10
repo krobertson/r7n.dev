@@ -1,0 +1,10 @@
+{
+  pkgs,
+  ...
+}:
+
+{
+  packages = [
+    pkgs.hugo
+  ];
+}
